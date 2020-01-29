@@ -11,6 +11,7 @@
 		85259C8823E1A79F00B469E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85259C8723E1A79F00B469E6 /* ViewController.swift */; };
 		85259C8B23E1A79F00B469E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85259C8923E1A79F00B469E6 /* Main.storyboard */; };
 		85259C8D23E1A7A100B469E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85259C8C23E1A7A100B469E6 /* Assets.xcassets */; };
+		FF22E27E2AA6FD459C0876FB /* Pods_hirakanaChanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CE5EBE59A8C885DA50B8B5 /* Pods_hirakanaChanger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,9 @@
 		85259C8A23E1A79F00B469E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85259C8C23E1A7A100B469E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85259C9123E1A7A100B469E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A03AC4BA653966E4EC392C2C /* Pods-hirakanaChanger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hirakanaChanger.release.xcconfig"; path = "Target Support Files/Pods-hirakanaChanger/Pods-hirakanaChanger.release.xcconfig"; sourceTree = "<group>"; };
+		B1F7DDEC19B2EA67B60A1E88 /* Pods-hirakanaChanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hirakanaChanger.debug.xcconfig"; path = "Target Support Files/Pods-hirakanaChanger/Pods-hirakanaChanger.debug.xcconfig"; sourceTree = "<group>"; };
+		C5CE5EBE59A8C885DA50B8B5 /* Pods_hirakanaChanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hirakanaChanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF22E27E2AA6FD459C0876FB /* Pods_hirakanaChanger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2943A594141F05F3BC916FAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1F7DDEC19B2EA67B60A1E88 /* Pods-hirakanaChanger.debug.xcconfig */,
+				A03AC4BA653966E4EC392C2C /* Pods-hirakanaChanger.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		85259C7723E1A79F00B469E6 = {
 			isa = PBXGroup;
 			children = (
 				85259C8223E1A79F00B469E6 /* hirakanaChanger */,
 				85259C8123E1A79F00B469E6 /* Products */,
+				2943A594141F05F3BC916FAF /* Pods */,
+				C69A11FF72B629A4BFBA98F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +78,14 @@
 			path = hirakanaChanger;
 			sourceTree = "<group>";
 		};
+		C69A11FF72B629A4BFBA98F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5CE5EBE59A8C885DA50B8B5 /* Pods_hirakanaChanger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85259C9423E1A7A100B469E6 /* Build configuration list for PBXNativeTarget "hirakanaChanger" */;
 			buildPhases = (
+				E40C12726FDCF6E6ED76A17A /* [CP] Check Pods Manifest.lock */,
 				85259C7C23E1A79F00B469E6 /* Sources */,
 				85259C7D23E1A79F00B469E6 /* Frameworks */,
 				85259C7E23E1A79F00B469E6 /* Resources */,
+				E57C13096B6B96DD1A02FB4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +152,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E40C12726FDCF6E6ED76A17A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hirakanaChanger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E57C13096B6B96DD1A02FB4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hirakanaChanger/Pods-hirakanaChanger-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hirakanaChanger/Pods-hirakanaChanger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		85259C7C23E1A79F00B469E6 /* Sources */ = {
@@ -266,6 +340,7 @@
 		};
 		85259C9523E1A7A100B469E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1F7DDEC19B2EA67B60A1E88 /* Pods-hirakanaChanger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -285,6 +360,7 @@
 		};
 		85259C9623E1A7A100B469E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A03AC4BA653966E4EC392C2C /* Pods-hirakanaChanger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
