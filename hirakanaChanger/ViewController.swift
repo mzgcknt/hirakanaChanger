@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import TextFieldEffects
 
 class ViewController: UIViewController {
-
+  @IBOutlet weak var convertedText: UITextView!
+  @IBOutlet weak var convertField: KaedeTextField!
+  @IBOutlet weak var errorText: UILabel!
+  @IBOutlet weak var convertSwitcher: UISegmentedControl!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
   }
 
 

@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (4.8.2)
+  - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - Alamofire
+  - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: fb641fecbf8583f28ef85e63960c11eef6527851
+PODFILE CHECKSUM: ca9611b364a17ff10248164de484401e65f17475
 
 COCOAPODS: 1.6.1
