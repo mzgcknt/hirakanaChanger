@@ -11,6 +11,12 @@
 		85259C8823E1A79F00B469E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85259C8723E1A79F00B469E6 /* ViewController.swift */; };
 		85259C8B23E1A79F00B469E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85259C8923E1A79F00B469E6 /* Main.storyboard */; };
 		85259C8D23E1A7A100B469E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85259C8C23E1A7A100B469E6 /* Assets.xcassets */; };
+		85490B3523E31025001EE003 /* HiraganaApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85490B3423E31025001EE003 /* HiraganaApiRequest.swift */; };
+		85490B3723E31403001EE003 /* HiraganaApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85490B3623E31403001EE003 /* HiraganaApiProvider.swift */; };
+		85490B3E23E322CB001EE003 /* HiraganaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85490B3D23E322CB001EE003 /* HiraganaApi.swift */; };
+		85CF84FB23E50DC2008464B3 /* HiraganaApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF84FA23E50DC2008464B3 /* HiraganaApiResponse.swift */; };
+		85CF84FD23E525D5008464B3 /* HiraganaApiListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF84FC23E525D5008464B3 /* HiraganaApiListener.swift */; };
+		85CF84FF23E52FAA008464B3 /* HiraganaApiMessageListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF84FE23E52FAA008464B3 /* HiraganaApiMessageListener.swift */; };
 		FF22E27E2AA6FD459C0876FB /* Pods_hirakanaChanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CE5EBE59A8C885DA50B8B5 /* Pods_hirakanaChanger.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +27,12 @@
 		85259C8A23E1A79F00B469E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85259C8C23E1A7A100B469E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85259C9123E1A7A100B469E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85490B3423E31025001EE003 /* HiraganaApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaApiRequest.swift; sourceTree = "<group>"; };
+		85490B3623E31403001EE003 /* HiraganaApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaApiProvider.swift; sourceTree = "<group>"; };
+		85490B3D23E322CB001EE003 /* HiraganaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaApi.swift; sourceTree = "<group>"; };
+		85CF84FA23E50DC2008464B3 /* HiraganaApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaApiResponse.swift; sourceTree = "<group>"; };
+		85CF84FC23E525D5008464B3 /* HiraganaApiListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaApiListener.swift; sourceTree = "<group>"; };
+		85CF84FE23E52FAA008464B3 /* HiraganaApiMessageListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaApiMessageListener.swift; sourceTree = "<group>"; };
 		A03AC4BA653966E4EC392C2C /* Pods-hirakanaChanger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hirakanaChanger.release.xcconfig"; path = "Target Support Files/Pods-hirakanaChanger/Pods-hirakanaChanger.release.xcconfig"; sourceTree = "<group>"; };
 		B1F7DDEC19B2EA67B60A1E88 /* Pods-hirakanaChanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hirakanaChanger.debug.xcconfig"; path = "Target Support Files/Pods-hirakanaChanger/Pods-hirakanaChanger.debug.xcconfig"; sourceTree = "<group>"; };
 		C5CE5EBE59A8C885DA50B8B5 /* Pods_hirakanaChanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hirakanaChanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +56,6 @@
 				B1F7DDEC19B2EA67B60A1E88 /* Pods-hirakanaChanger.debug.xcconfig */,
 				A03AC4BA653966E4EC392C2C /* Pods-hirakanaChanger.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -69,6 +80,7 @@
 		85259C8223E1A79F00B469E6 /* hirakanaChanger */ = {
 			isa = PBXGroup;
 			children = (
+				85490B3C23E31E0E001EE003 /* HiraganaApi */,
 				85259C8323E1A79F00B469E6 /* AppDelegate.swift */,
 				85259C8723E1A79F00B469E6 /* ViewController.swift */,
 				85259C8923E1A79F00B469E6 /* Main.storyboard */,
@@ -76,6 +88,19 @@
 				85259C9123E1A7A100B469E6 /* Info.plist */,
 			);
 			path = hirakanaChanger;
+			sourceTree = "<group>";
+		};
+		85490B3C23E31E0E001EE003 /* HiraganaApi */ = {
+			isa = PBXGroup;
+			children = (
+				85490B3D23E322CB001EE003 /* HiraganaApi.swift */,
+				85CF84FC23E525D5008464B3 /* HiraganaApiListener.swift */,
+				85CF84FE23E52FAA008464B3 /* HiraganaApiMessageListener.swift */,
+				85490B3623E31403001EE003 /* HiraganaApiProvider.swift */,
+				85490B3423E31025001EE003 /* HiraganaApiRequest.swift */,
+				85CF84FA23E50DC2008464B3 /* HiraganaApiResponse.swift */,
+			);
+			path = HiraganaApi;
 			sourceTree = "<group>";
 		};
 		C69A11FF72B629A4BFBA98F0 /* Frameworks */ = {
@@ -207,8 +232,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85CF84FB23E50DC2008464B3 /* HiraganaApiResponse.swift in Sources */,
+				85490B3723E31403001EE003 /* HiraganaApiProvider.swift in Sources */,
+				85490B3E23E322CB001EE003 /* HiraganaApi.swift in Sources */,
 				85259C8823E1A79F00B469E6 /* ViewController.swift in Sources */,
 				85259C8423E1A79F00B469E6 /* AppDelegate.swift in Sources */,
+				85CF84FD23E525D5008464B3 /* HiraganaApiListener.swift in Sources */,
+				85CF84FF23E52FAA008464B3 /* HiraganaApiMessageListener.swift in Sources */,
+				85490B3523E31025001EE003 /* HiraganaApiRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
