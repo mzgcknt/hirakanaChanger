@@ -9,7 +9,7 @@
 import UIKit
 import TextFieldEffects
 
-class ViewController: UIViewController, HiraganaApiMessageListener {
+class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldDelegate {
   @IBOutlet weak var convertedText: UITextView!
   @IBOutlet weak var convertField: KaedeTextField!
   @IBOutlet weak var errorText: UILabel!
@@ -19,6 +19,7 @@ class ViewController: UIViewController, HiraganaApiMessageListener {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.convertField.delegate = self
   }
   
   /// テキストフィールドの変換処理
@@ -32,14 +33,23 @@ class ViewController: UIViewController, HiraganaApiMessageListener {
   @IBAction func segmentChanged(_ sender: Any) {
     self.selectedIndex = convertSwitcher.selectedSegmentIndex
   }
-  
+  // MARK: - UITextFieldDelegate
+  /// キーボードの決定ボタン押下時に、閉じる
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+  /// テキストフィールド以外をタッチした際にキーボードを閉じる
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+      self.view.endEditing(true)
+  }
   // MARK: - HiraganaApiMessageListener
   /// ひらがなAPIのレスポンス値を受け取る
   /// - Parameter responseMessage: レスポンス
   /// - Parameter responseError: レスポンス時のエラー内容
   func onMessageListener(responseMessage: HiraganaApiResponse?, responseError: Error?) {
     // API側でエラーがあった場合はエラー文の表示
-    if let error = responseError {
+    if let _ = responseError {
       self.errorText.text = "ネットワーク環境を確認してください"
     }
     self.convertedText.text = responseMessage?.Converted
