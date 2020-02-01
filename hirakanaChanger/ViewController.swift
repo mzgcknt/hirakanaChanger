@@ -41,7 +41,6 @@ class ViewController: UIViewController, HiraganaApiMessageListener {
     // API側でエラーがあった場合はエラー文の表示
     if let error = responseError {
       self.errorText.text = "ネットワーク環境を確認してください"
-      self.convertedText.text = error.localizedDescription
     }
     self.convertedText.text = responseMessage?.Converted
   }
