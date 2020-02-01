@@ -18,6 +18,13 @@ class HiraganaApiRequest {
   // リクエストパラメータ
   private let requestParameter: [String:String]
   
+  /// リクエストパラメータ群
+  var Request: [String: String] {
+    return self.requestParameter
+  }
+  var Url: String {
+    return "https://labs.goo.ne.jp/api/hiragana"
+  }
   init(sentence: String, outputType: String) {
     self.sentence = sentence
     self.outputType = outputType
@@ -27,12 +34,6 @@ class HiraganaApiRequest {
       "output_type": self.outputType
     ]
   }
-  
-  /// リクエストパラメータ群
-  var Request: [String: String] {
-    return self.requestParameter
-  }
-  
   /// リクエストIDを指定した場合のイニシャライザ
   /// - Parameters:
   ///   - requestId: リクエストID
