@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		85259C8023E1A79F00B469E6 /* hirakanaChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hirakanaChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85259C8023E1A79F00B469E6 /* ひらカナちぇんじゃー.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ひらカナちぇんじゃー.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85259C8323E1A79F00B469E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85259C8723E1A79F00B469E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85259C8A23E1A79F00B469E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		85259C8123E1A79F00B469E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85259C8023E1A79F00B469E6 /* hirakanaChanger.app */,
+				85259C8023E1A79F00B469E6 /* ひらカナちぇんじゃー.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,7 +133,7 @@
 			);
 			name = hirakanaChanger;
 			productName = hirakanaChanger;
-			productReference = 85259C8023E1A79F00B469E6 /* hirakanaChanger.app */;
+			productReference = 85259C8023E1A79F00B469E6 /* ひらカナちぇんじゃー.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -389,7 +389,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mzgcknt.hirakanaChanger;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ひらカナちぇんじゃー";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -409,7 +409,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mzgcknt.hirakanaChanger;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "ひらカナちぇんじゃー";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
