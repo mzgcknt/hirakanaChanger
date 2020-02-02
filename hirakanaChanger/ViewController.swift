@@ -22,11 +22,18 @@ class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldD
     super.viewDidLoad()
     self.convertField.delegate = self
     self.errorText.morphingEffect = .fall
+    self.customizeTextView()
   }
   
   /// エラー文の消去
   private func clearErrorText() {
     self.errorText.text = ""
+  }
+  /// IBで変更できなかった項目のカスタマイズ
+  private func customizeTextView() {
+    self.convertedText.layer.borderColor = UIColor.green.cgColor
+    self.convertedText.layer.borderWidth = 1
+    self.convertedText.layer.cornerRadius = 10
   }
   /// テキストフィールドの変換処理
   /// - Parameter sender: convertField
@@ -57,7 +64,7 @@ class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldD
   func onMessageListener(responseMessage: HiraganaApiResponse?, responseError: Error?) {
     // API側でエラーがあった場合はエラー文の表示
     if let _ = responseError {
-      self.errorText.text = "ネットワーク環境を確認してください"
+      self.errorText.text = "ネットワーク環境を確認してください。"
     } else {
       self.clearErrorText()
     }

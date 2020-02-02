@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -13,12 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ひらカナちぇんじゃー" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vha-R5-J2A">
-                                <rect key="frame" x="216" y="309" width="91" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vha-R5-J2A">
+                                <rect key="frame" x="268" y="427.5" width="106" height="35"/>
                                 <segments>
                                     <segment title="ひ"/>
                                     <segment title="ヒ"/>
@@ -28,19 +27,21 @@
                                     <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cEZ-oY-4pp"/>
                                 </connections>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GWh-bu-iPV">
-                                <rect key="frame" x="38" y="42" width="269" height="172"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GWh-bu-iPV">
+                                <rect key="frame" x="10" y="84" width="393.5" height="245.5"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日本語のテキスト" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63O-Ny-w5M" customClass="KaedeTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="43" y="267" width="264" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inf-hT-1hv" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <rect key="frame" x="20" y="334.5" width="354" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日本語のテキストを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63O-Ny-w5M" customClass="KaedeTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="388.5" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -49,20 +50,33 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="foregroundColor">
                                         <color key="value" red="0.66962488821555832" green="0.98039215690000003" blue="0.84900535377660846" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="convertFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="zWs-c0-FRu"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inf-hT-1hv" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                <rect key="frame" x="38" y="228" width="269" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GWh-bu-iPV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="9Ra-m3-was"/>
+                            <constraint firstItem="Vha-R5-J2A" firstAttribute="trailing" secondItem="63O-Ny-w5M" secondAttribute="trailing" id="Krp-Cl-EMm"/>
+                            <constraint firstItem="Vha-R5-J2A" firstAttribute="top" secondItem="63O-Ny-w5M" secondAttribute="bottom" constant="5" id="Lgm-AL-81I"/>
+                            <constraint firstItem="Inf-hT-1hv" firstAttribute="leading" secondItem="GWh-bu-iPV" secondAttribute="leading" constant="10" id="Nu3-h5-Kkg"/>
+                            <constraint firstItem="63O-Ny-w5M" firstAttribute="top" secondItem="Inf-hT-1hv" secondAttribute="bottom" constant="5" id="PwE-7f-Bdh"/>
+                            <constraint firstItem="Inf-hT-1hv" firstAttribute="width" secondItem="GWh-bu-iPV" secondAttribute="width" multiplier="0.9" id="Qq6-17-9kB"/>
+                            <constraint firstItem="Vha-R5-J2A" firstAttribute="width" secondItem="63O-Ny-w5M" secondAttribute="width" multiplier="0.3" id="WaK-6j-fUE"/>
+                            <constraint firstItem="GWh-bu-iPV" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.95" id="YbN-B3-mkf"/>
+                            <constraint firstItem="Inf-hT-1hv" firstAttribute="top" secondItem="GWh-bu-iPV" secondAttribute="bottom" constant="5" id="Yj0-lr-Jcn"/>
+                            <constraint firstItem="63O-Ny-w5M" firstAttribute="leading" secondItem="Inf-hT-1hv" secondAttribute="leading" id="cmB-YK-QqA"/>
+                            <constraint firstItem="GWh-bu-iPV" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="d97-YH-OEv"/>
+                            <constraint firstItem="63O-Ny-w5M" firstAttribute="width" secondItem="Inf-hT-1hv" secondAttribute="width" id="dqr-zG-cBf"/>
+                            <constraint firstItem="Inf-hT-1hv" firstAttribute="height" secondItem="GWh-bu-iPV" secondAttribute="height" multiplier="0.2" id="pUy-kh-E5Z"/>
+                            <constraint firstItem="Vha-R5-J2A" firstAttribute="height" secondItem="63O-Ny-w5M" secondAttribute="height" id="xBc-1D-Z0d"/>
+                            <constraint firstItem="GWh-bu-iPV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="yoQ-7z-Lhs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -74,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
