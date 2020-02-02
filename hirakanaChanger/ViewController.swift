@@ -38,6 +38,7 @@ class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldD
   /// - Parameter sender: convertSwitcher
   @IBAction func segmentChanged(_ sender: Any) {
     self.selectedIndex = convertSwitcher.selectedSegmentIndex
+    HiraganaApiProvider.initialize(selectedIndex: self.selectedIndex, listener: self).inquireRequestApi(sentence: self.convertField.text)
   }
   // MARK: - UITextFieldDelegate
   /// キーボードの決定ボタン押下時に、閉じる
