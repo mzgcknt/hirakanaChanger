@@ -8,5 +8,6 @@ target 'hirakanaChanger' do
   # Pods for hirakanaChanger
  pod 'Alamofire'
  pod 'TextFieldEffects'
+ pod 'LTMorphingLabel'
 
 end

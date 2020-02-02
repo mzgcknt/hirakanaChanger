@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.8.2)
+  - LTMorphingLabel (0.7.0)
   - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - Alamofire
+  - LTMorphingLabel
   - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - LTMorphingLabel
     - TextFieldEffects
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  LTMorphingLabel: 22147fb1ec2b0306537ccc348b36ea8617179b03
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: ca9611b364a17ff10248164de484401e65f17475
+PODFILE CHECKSUM: fcbf4c472bf207b6b60215d99cd7bfe5585addc0
 
 COCOAPODS: 1.6.1

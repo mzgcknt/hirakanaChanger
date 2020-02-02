@@ -8,11 +8,12 @@
 
 import UIKit
 import TextFieldEffects
+import LTMorphingLabel
 
 class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldDelegate {
   @IBOutlet weak var convertedText: UITextView!
   @IBOutlet weak var convertField: KaedeTextField!
-  @IBOutlet weak var errorText: UILabel!
+  @IBOutlet weak var errorText: LTMorphingLabel!
   @IBOutlet weak var convertSwitcher: UISegmentedControl!
   // 選択中セグメント
   private var selectedIndex = 0
@@ -20,8 +21,13 @@ class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldD
   override func viewDidLoad() {
     super.viewDidLoad()
     self.convertField.delegate = self
+    self.errorText.morphingEffect = .fall
   }
   
+  /// エラー文の消去
+  private func clearErrorText() {
+    self.errorText.text = ""
+  }
   /// テキストフィールドの変換処理
   /// - Parameter sender: convertField
   @IBAction func convertFieldChanged(_ sender: Any) {
@@ -51,6 +57,8 @@ class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldD
     // API側でエラーがあった場合はエラー文の表示
     if let _ = responseError {
       self.errorText.text = "ネットワーク環境を確認してください"
+    } else {
+      self.clearErrorText()
     }
     self.convertedText.text = responseMessage?.Converted
   }
