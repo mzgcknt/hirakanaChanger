@@ -15,6 +15,8 @@ class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldD
   @IBOutlet weak var convertField: KaedeTextField!
   @IBOutlet weak var errorText: LTMorphingLabel!
   @IBOutlet weak var convertSwitcher: UISegmentedControl!
+  @IBOutlet weak var clearTextButton: UIButton!
+  
   // 選択中セグメント
   private var selectedIndex = 0
   
@@ -47,6 +49,13 @@ class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldD
     self.selectedIndex = convertSwitcher.selectedSegmentIndex
     HiraganaApiProvider.initialize(selectedIndex: self.selectedIndex, listener: self).inquireRequestApi(sentence: self.convertField.text)
   }
+  /// 入力値の全消し処理
+  /// - Parameter sender: clearTextButton
+  @IBAction func clearAllTextView(_ sender: Any) {
+    self.convertedText.text = ""
+    self.convertField.text = ""
+  }
+  
   // MARK: - UITextFieldDelegate
   /// キーボードの決定ボタン押下時に、閉じる
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {

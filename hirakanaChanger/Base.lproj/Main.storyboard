@@ -16,17 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vha-R5-J2A">
-                                <rect key="frame" x="268" y="427.5" width="106" height="35"/>
-                                <segments>
-                                    <segment title="ひ"/>
-                                    <segment title="ヒ"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cEZ-oY-4pp"/>
-                                </connections>
-                            </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GWh-bu-iPV">
                                 <rect key="frame" x="10" y="84" width="393.5" height="245.5"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -40,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日本語のテキストを入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63O-Ny-w5M" customClass="KaedeTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="20" y="388.5" width="354" height="34"/>
+                                <rect key="frame" x="20" y="388.5" width="354" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <userDefinedRuntimeAttributes>
@@ -58,28 +47,57 @@
                                     <action selector="convertFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="zWs-c0-FRu"/>
                                 </connections>
                             </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="140" translatesAutoresizingMaskIntoConstraints="NO" id="Ybi-ft-6gE">
+                                <rect key="frame" x="20" y="447.5" width="354" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eaa-hk-g1w">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="49"/>
+                                        <state key="normal" title="Button" image="消しゴム"/>
+                                        <connections>
+                                            <action selector="clearAllTextView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwv-Lu-aXG"/>
+                                        </connections>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vha-R5-J2A">
+                                        <rect key="frame" x="247" y="0.0" width="107" height="50"/>
+                                        <segments>
+                                            <segment title="ひ"/>
+                                            <segment title="ヒ"/>
+                                        </segments>
+                                        <color key="selectedSegmentTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="cEZ-oY-4pp"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Vha-R5-J2A" firstAttribute="width" secondItem="Eaa-hk-g1w" secondAttribute="width" id="beH-uS-g3i"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="63O-Ny-w5M" firstAttribute="height" secondItem="Inf-hT-1hv" secondAttribute="height" id="3Bd-Yk-5hO"/>
+                            <constraint firstItem="Ybi-ft-6gE" firstAttribute="leading" secondItem="63O-Ny-w5M" secondAttribute="leading" id="5G8-Ie-afO"/>
                             <constraint firstItem="GWh-bu-iPV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="9Ra-m3-was"/>
-                            <constraint firstItem="Vha-R5-J2A" firstAttribute="trailing" secondItem="63O-Ny-w5M" secondAttribute="trailing" id="Krp-Cl-EMm"/>
-                            <constraint firstItem="Vha-R5-J2A" firstAttribute="top" secondItem="63O-Ny-w5M" secondAttribute="bottom" constant="5" id="Lgm-AL-81I"/>
+                            <constraint firstItem="Ybi-ft-6gE" firstAttribute="width" secondItem="63O-Ny-w5M" secondAttribute="width" id="FRA-Kd-ELM"/>
                             <constraint firstItem="Inf-hT-1hv" firstAttribute="leading" secondItem="GWh-bu-iPV" secondAttribute="leading" constant="10" id="Nu3-h5-Kkg"/>
                             <constraint firstItem="63O-Ny-w5M" firstAttribute="top" secondItem="Inf-hT-1hv" secondAttribute="bottom" constant="5" id="PwE-7f-Bdh"/>
                             <constraint firstItem="Inf-hT-1hv" firstAttribute="width" secondItem="GWh-bu-iPV" secondAttribute="width" multiplier="0.9" id="Qq6-17-9kB"/>
-                            <constraint firstItem="Vha-R5-J2A" firstAttribute="width" secondItem="63O-Ny-w5M" secondAttribute="width" multiplier="0.3" id="WaK-6j-fUE"/>
+                            <constraint firstItem="Ybi-ft-6gE" firstAttribute="height" secondItem="63O-Ny-w5M" secondAttribute="height" id="VvJ-cX-UaG"/>
                             <constraint firstItem="GWh-bu-iPV" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.95" id="YbN-B3-mkf"/>
                             <constraint firstItem="Inf-hT-1hv" firstAttribute="top" secondItem="GWh-bu-iPV" secondAttribute="bottom" constant="5" id="Yj0-lr-Jcn"/>
                             <constraint firstItem="63O-Ny-w5M" firstAttribute="leading" secondItem="Inf-hT-1hv" secondAttribute="leading" id="cmB-YK-QqA"/>
                             <constraint firstItem="GWh-bu-iPV" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="d97-YH-OEv"/>
                             <constraint firstItem="63O-Ny-w5M" firstAttribute="width" secondItem="Inf-hT-1hv" secondAttribute="width" id="dqr-zG-cBf"/>
+                            <constraint firstItem="Ybi-ft-6gE" firstAttribute="top" secondItem="63O-Ny-w5M" secondAttribute="bottom" constant="10" id="huu-yU-X4i"/>
                             <constraint firstItem="Inf-hT-1hv" firstAttribute="height" secondItem="GWh-bu-iPV" secondAttribute="height" multiplier="0.2" id="pUy-kh-E5Z"/>
-                            <constraint firstItem="Vha-R5-J2A" firstAttribute="height" secondItem="63O-Ny-w5M" secondAttribute="height" id="xBc-1D-Z0d"/>
+                            <constraint firstItem="Ybi-ft-6gE" firstAttribute="trailing" secondItem="63O-Ny-w5M" secondAttribute="trailing" id="yEk-jE-qRl"/>
                             <constraint firstItem="GWh-bu-iPV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="yoQ-7z-Lhs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="clearTextButton" destination="Eaa-hk-g1w" id="TzJ-I0-PGq"/>
                         <outlet property="convertField" destination="63O-Ny-w5M" id="uov-aV-Nbc"/>
                         <outlet property="convertSwitcher" destination="Vha-R5-J2A" id="Hfv-71-JSf"/>
                         <outlet property="convertedText" destination="GWh-bu-iPV" id="tyE-9B-cRF"/>
@@ -91,4 +109,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="消しゴム" width="227" height="246"/>
+    </resources>
 </document>
