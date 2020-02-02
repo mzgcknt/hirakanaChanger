@@ -17,6 +17,7 @@
 		85CF84FB23E50DC2008464B3 /* HiraganaApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF84FA23E50DC2008464B3 /* HiraganaApiResponse.swift */; };
 		85CF84FD23E525D5008464B3 /* HiraganaApiListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF84FC23E525D5008464B3 /* HiraganaApiListener.swift */; };
 		85CF84FF23E52FAA008464B3 /* HiraganaApiMessageListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CF84FE23E52FAA008464B3 /* HiraganaApiMessageListener.swift */; };
+		85CF850123E67313008464B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85CF850023E67313008464B3 /* LaunchScreen.xib */; };
 		FF22E27E2AA6FD459C0876FB /* Pods_hirakanaChanger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CE5EBE59A8C885DA50B8B5 /* Pods_hirakanaChanger.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		85CF84FA23E50DC2008464B3 /* HiraganaApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaApiResponse.swift; sourceTree = "<group>"; };
 		85CF84FC23E525D5008464B3 /* HiraganaApiListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaApiListener.swift; sourceTree = "<group>"; };
 		85CF84FE23E52FAA008464B3 /* HiraganaApiMessageListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiraganaApiMessageListener.swift; sourceTree = "<group>"; };
+		85CF850023E67313008464B3 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		A03AC4BA653966E4EC392C2C /* Pods-hirakanaChanger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hirakanaChanger.release.xcconfig"; path = "Target Support Files/Pods-hirakanaChanger/Pods-hirakanaChanger.release.xcconfig"; sourceTree = "<group>"; };
 		B1F7DDEC19B2EA67B60A1E88 /* Pods-hirakanaChanger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hirakanaChanger.debug.xcconfig"; path = "Target Support Files/Pods-hirakanaChanger/Pods-hirakanaChanger.debug.xcconfig"; sourceTree = "<group>"; };
 		C5CE5EBE59A8C885DA50B8B5 /* Pods_hirakanaChanger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hirakanaChanger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,7 @@
 				85259C8923E1A79F00B469E6 /* Main.storyboard */,
 				85259C8C23E1A7A100B469E6 /* Assets.xcassets */,
 				85259C9123E1A7A100B469E6 /* Info.plist */,
+				85CF850023E67313008464B3 /* LaunchScreen.xib */,
 			);
 			path = hirakanaChanger;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85259C8D23E1A7A100B469E6 /* Assets.xcassets in Resources */,
+				85CF850123E67313008464B3 /* LaunchScreen.xib in Resources */,
 				85259C8B23E1A79F00B469E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
