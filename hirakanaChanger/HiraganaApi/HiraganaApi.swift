@@ -24,8 +24,13 @@ class HiraganaApi {
   /// - Parameter request: リクエスト
   func requestApi(request: HiraganaApiRequest) {
     Alamofire.request(request.Url, method: self.method, parameters: request.Request, encoding: JSONEncoding.prettyPrinted, headers: self.requestHeader)
-      .responseString(encoding: .utf8) { response in
-        self.apiListener.onResponse(response: HiraganaApiResponse.create(jsonText: response.result.value), responseError: response.result.error)
+      .responseString(encoding: .utf8) { [apiListener] response in
+//      参考: https://fromatom.hatenablog.com/entry/2016/01/27/125657
+//      guard let `self` = self else {
+//        return
+//      }
+        // クロージャ内ではselfのメンバ変数を使えるが、強参照してしまうためキャプチャリストで回避する
+        apiListener.onResponse(response: HiraganaApiResponse.create(jsonText: response.result.value), responseError: response.result.error)
       }
-    }
+  }
 }
