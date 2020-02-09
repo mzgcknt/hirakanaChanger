@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "消しゴム-1.png",
+      "filename" : "消しゴム.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "消しゴム-2.png",
+      "filename" : "消しゴム-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "消しゴム.png",
+      "filename" : "消しゴム-2.png",
       "scale" : "3x"
     }
   ],

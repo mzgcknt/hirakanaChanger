@@ -52,7 +52,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eaa-hk-g1w">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="49"/>
-                                        <state key="normal" title="Button" image="eraser"/>
+                                        <state key="normal" title="Button" image="Eraser"/>
                                         <connections>
                                             <action selector="clearAllTextView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwv-Lu-aXG"/>
                                         </connections>
@@ -110,6 +110,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="eraser" width="227" height="246"/>
+        <image name="Eraser" width="227" height="246"/>
     </resources>
 </document>
