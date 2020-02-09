@@ -41,13 +41,13 @@ class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldD
   /// - Parameter sender: convertField
   @IBAction func convertFieldChanged(_ sender: Any) {
     // TODO: デフォルトでrequestIdは指定しないが、時間があれば設定できるようにする
-    HiraganaApiProvider.initialize(selectedIndex: self.selectedIndex, listener: self).inquireRequestApi(sentence: self.convertField.text)
+    HiraganaApiProvider(selectedIndex: self.selectedIndex, listener: self).inquireRequestApi(sentence: self.convertField.text)
   }
   /// 出力種別の変更
   /// - Parameter sender: convertSwitcher
   @IBAction func segmentChanged(_ sender: Any) {
     self.selectedIndex = convertSwitcher.selectedSegmentIndex
-    HiraganaApiProvider.initialize(selectedIndex: self.selectedIndex, listener: self).inquireRequestApi(sentence: self.convertField.text)
+    HiraganaApiProvider(selectedIndex: self.selectedIndex, listener: self).inquireRequestApi(sentence: self.convertField.text)
   }
   /// 入力値の全消し処理
   /// - Parameter sender: clearTextButton
