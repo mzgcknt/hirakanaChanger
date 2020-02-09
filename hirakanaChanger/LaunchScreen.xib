@@ -14,10 +14,10 @@
             <rect key="frame" x="0.0" y="0.0" width="399" height="578"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Copyright" translatesAutoresizingMaskIntoConstraints="NO" id="CFa-34-0zv">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="copyright" translatesAutoresizingMaskIntoConstraints="NO" id="CFa-34-0zv">
                     <rect key="frame" x="239.5" y="520" width="159.5" height="58"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashIcom" translatesAutoresizingMaskIntoConstraints="NO" id="gec-dM-cO5">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashIcom" translatesAutoresizingMaskIntoConstraints="NO" id="gec-dM-cO5">
                     <rect key="frame" x="40" y="231" width="319" height="116"/>
                 </imageView>
             </subviews>
@@ -38,7 +38,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Copyright" width="261" height="109.5"/>
-        <image name="SplashIcom" width="400" height="165.5"/>
+        <image name="copyright" width="261" height="109.5"/>
+        <image name="splashIcom" width="400" height="165.5"/>
     </resources>
 </document>
