@@ -19,6 +19,8 @@ class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldD
   
   // 選択中セグメント
   private var selectedIndex = 0
+  // 入力文字数上限
+  private let maxLength = 100
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,17 +39,28 @@ class ViewController: UIViewController, HiraganaApiMessageListener, UITextFieldD
     self.convertedText.layer.borderWidth = 1
     self.convertedText.layer.cornerRadius = 10
   }
+  /// 入力文字数上限判定
+  private func isLimitCount() -> Bool {
+    guard let inputCount = self.convertField.text?.count else { return false }
+    return inputCount <= self.maxLength
+  }
   /// テキストフィールドの変換処理
   /// - Parameter sender: convertField
   @IBAction func convertFieldChanged(_ sender: Any) {
     // TODO: デフォルトでrequestIdは指定しないが、時間があれば設定できるようにする
-    HiraganaApiProvider.initialize(selectedIndex: self.selectedIndex, listener: self).inquireRequestApi(sentence: self.convertField.text)
+    if self.isLimitCount() {
+      HiraganaApiProvider(selectedIndex: self.selectedIndex, listener: self).inquireRequestApi(sentence: self.convertField.text)
+      self.convertField.backgroundColor = .none
+    } else {
+      // 入力文字数上限に達したらAPIの実行をしない
+      self.convertField.backgroundColor = .red
+    }
   }
   /// 出力種別の変更
   /// - Parameter sender: convertSwitcher
   @IBAction func segmentChanged(_ sender: Any) {
     self.selectedIndex = convertSwitcher.selectedSegmentIndex
-    HiraganaApiProvider.initialize(selectedIndex: self.selectedIndex, listener: self).inquireRequestApi(sentence: self.convertField.text)
+    HiraganaApiProvider(selectedIndex: self.selectedIndex, listener: self).inquireRequestApi(sentence: self.convertField.text)
   }
   /// 入力値の全消し処理
   /// - Parameter sender: clearTextButton
