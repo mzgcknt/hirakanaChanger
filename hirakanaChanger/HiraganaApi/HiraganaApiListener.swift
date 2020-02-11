@@ -9,6 +9,6 @@
 import Foundation
 
 /// ひらがなAPIのイベントリスナー
-protocol HiraganaApiListener: class {
+protocol HiraganaApiListener: AnyObject {
   func onResponse(response: HiraganaApiResponse?, responseError: Error?)
 }

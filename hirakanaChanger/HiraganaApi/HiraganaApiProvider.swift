@@ -10,20 +10,27 @@ import Foundation
 
 /// ひらがなAPIの管理クラス
 class HiraganaApiProvider: HiraganaApiListener {
-  private let outputType: String
+  private let selectedIndex: Int
   private let responseMessageListener: HiraganaApiMessageListener
   
-  private init(outputType: String, listener: HiraganaApiMessageListener) {
-    self.outputType = outputType
+  /// 出力種別
+  enum OutputType: Int {
+    case hiragana = 0
+    case katakana = 1
+  }
+  
+  init(selectedIndex: Int, listener: HiraganaApiMessageListener) {
+    self.selectedIndex = selectedIndex
     self.responseMessageListener = listener
   }
   
-  /// インスタンス作成前に出力種別の判定処理
-  /// - Parameter selectedIndex: 選択中インデックス
-  /// - Parameter listener: メッセージイベントリスナー
-  static func initialize(selectedIndex: Int, listener: HiraganaApiMessageListener) -> HiraganaApiProvider {
-    let outputType = (selectedIndex == 0) ? "hiragana":"katakana"
-    return HiraganaApiProvider(outputType: outputType, listener:listener)
+  /// 変換する日本語がひらがなか判定処理
+  private func isSelectedHiragana() -> Bool {
+    return self.selectedIndex == OutputType.hiragana.rawValue
+  }
+  /// 出力種別の判定処理
+  private func getOutputType() -> String {
+    return self.isSelectedHiragana() ? "hiragana":"katakana"
   }
   /// ひらがなAPIの問合せ
   /// - Parameter sentence: テキストフィールドに入力されたテキスト
@@ -32,9 +39,9 @@ class HiraganaApiProvider: HiraganaApiListener {
     // リクエストボディの型に合わせるためアンラップ
     guard let sentence = sentence else { return }
     if let requestId = requestId {
-      HiraganaApi(apiListener: self).requestApi(request: HiraganaApiRequest(requestId: requestId, sentence: sentence, outputType: self.outputType))
+      HiraganaApi(apiListener: self).requestApi(request: HiraganaApiRequest(requestId: requestId, sentence: sentence, outputType: self.getOutputType()))
     } else {
-      HiraganaApi(apiListener: self).requestApi(request: HiraganaApiRequest(sentence: sentence, outputType: self.outputType))
+      HiraganaApi(apiListener: self).requestApi(request: HiraganaApiRequest(sentence: sentence, outputType: self.getOutputType()))
     }
   }
   

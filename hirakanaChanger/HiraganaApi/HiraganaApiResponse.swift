@@ -11,9 +11,8 @@ import Foundation
 /// ひらがなAPIのレスポンスクラス
 class HiraganaApiResponse: Codable {
   private let converted: String?
-  // 自動マッピング処理のため、スネークケースで定義
-  private let output_type: String?
-  private let request_id: String?
+  private let outputType: String?
+  private let requestId: String?
   
   var Converted: String? {
     return self.converted
@@ -31,6 +30,8 @@ class HiraganaApiResponse: Codable {
     guard let jsonTextData = jsonText.data(using: .utf8) else { return nil }
     let decoder = JSONDecoder()
     decoder.dateDecodingStrategy = .iso8601
+    // camelCase → snake_case
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
     if let decodeJSON = try? decoder.decode(self, from: jsonTextData){
       return decodeJSON
     }
